@@ -1,0 +1,279 @@
+/* général */
+body {
+    font-family: 'Montserrat',
+    sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#1ED760;
+}
+
+.highlight {
+    font-weight: 900;
+}
+
+.errorMessage {
+    font-size: 20px;
+    text-align: center;
+    padding:20px;
+}
+
+#centrePage {
+    margin-top: 30px;
+}
+
+.btn.btn-spotify {
+    background-color: #1ED760;
+    color: white;
+}
+
+/* titres */
+h2 {
+    border-bottom: 1px solid #1ED760;
+    font-weight: 600;
+    color: #282828;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+i.fa-angle-down, i.fa-angle-up {
+    position:absolute;
+    right:25px;
+    top:10%;
+    cursor:pointer;
+    font-size: 30px;
+}
+
+/* header */
+.conteneurHeader {
+    background-color: #282828;
+    color: white;
+}
+
+.titreSite {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.infoConnexion {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#menu li a {
+    border-radius: 15px;
+    padding-top:5px;
+    padding-bottom: 5px;
+}
+
+#menu li a:hover {
+    background-color: #1ED760;
+    color:white;
+}
+
+/* footer */
+footer {
+    margin-top: 30px;
+}
+
+/* Welcome */
+.welcomeMsg {
+    font-size: 25px;
+}
+
+/* Result Box */
+.artistResultContainer, .albumContainer, .trackContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.artistResultBox, .albumBox {
+    width: 15%;
+    overflow: hidden;
+    margin: 15px;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.artistResultBoxImg, .albumBoxImg {
+    height: 180px;
+    overflow: hidden;
+}
+
+.artistResultBox img, .albumBox img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.artistResultBox img:hover, .albumBox img:hover {
+    opacity:0.8;
+}
+
+.artistResultBox p, .albumBox p {
+    text-align: center;
+    margin: 15px;
+}
+
+/* page artiste */
+.artistIntro {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.artistIntroImg {
+    max-width:25%;
+    margin-right: 10%;
+}
+
+.artistIntro img {
+    border-radius: 100%;
+    width:100%;
+    -webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.artistIntro p {
+    font-size: 40px;
+    font-weight: 900;
+    width:65%;
+}
+
+.trackContainer iframe {
+    margin: 20px;
+}
+
+/* page album */
+.albumContainer {
+    position: relative;
+}
+
+.albumPageContainer iframe {
+    margin-top: 25px;
+}
+
+.albumPageContainer .albumName {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 0 0 15px 0;
+}
+
+.albumPageContainer .artistName {
+    font-size: 20px;
+}
+
+.albumPageImg img {
+    width:100%;
+}
+
+/* Pagination */
+.navigationMyAlbums p {
+    display: inline-block;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.navigationMyAlbums .fa-angle-double-left, .navigationMyAlbums .fa-angle-double-right {
+    background-color: #1ED760;
+    padding: 5px 15px;
+    color: white;
+}
+
+.navigationMyAlbums .fa-angle-double-left {
+    margin-right: 15px;
+    border-radius: 15px 0 0 15px;
+}
+
+.navigationMyAlbums .fa-angle-double-right {
+    margin-left: 15px;
+    border-radius: 0 15px 15px 0;
+}
+
+/* Media queries */
+@media (max-width:1200px){
+    .artistResultBox,
+    .albumBox {
+        width: 25%;
+    }
+
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 250px;
+    }
+}
+
+@media (max-width:992px) {
+    .titreSite, .infoConnexion {
+        text-align: center;
+    }
+
+    
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 200px;
+    }
+
+    .albumPageContainer .albumName {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:700px) {
+    .artistResultBox,
+    .albumBox {
+        width: 40%;
+    }
+
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 250px;
+    }
+}
+
+@media (max-width:500px) {
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 200px;
+    }
+
+    .artistIntro p {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:400px) {
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 150px;
+    }
+}
+
+@media (max-width:350px) {
+    .artistResultBox,
+    .albumBox {
+        width: 90%;
+    }
+
+    .artistResultBoxImg,
+    .albumBoxImg {
+        height: 300px;
+    }
+}
